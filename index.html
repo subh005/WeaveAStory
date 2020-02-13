@@ -1,0 +1,44 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Weave a Love Story</title>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Vollkorn+SC&display=swap" rel="stylesheet">
+<style type="text/css">
+body{ font-size:54px; font-family: 'Pacifico', cursive; font-family: 'Vollkorn SC', serif; }
+.container{width:350px; margin: auto;}
+.header{width:100%; height:150px; line-height:150px; font-size: 54px; text-align:center; color:#fff; font-weight:bold; border-bottom:1px solid #eee; box-shadow: 1px 1px 1px #eee; background-color: #2874f0; margin-bottom: 20px;}
+.category-image{width:352px; height:132px; margin:auto; margin-top:50px;}
+.category-body{width:90%; margin:auto; }
+.category-body a{text-decoration: none;}
+.category-button{width:100%; height:200px; line-height:200px;  margin-top:5%; text-align:center; background-color:#ff5252; border-radius:6px; box-shadow: 1px 1px 2px #ff5252; color:#fff; cursor: pointer;}
+@media only screen and (max-width: 600px) {
+	.container{width:100%; margin: 0;}
+	.header{ height:80px; line-height:80px; text-align:center; background-color: #000; color:#fff; }
+	.category-body{width:100%; margin:auto;}
+	.category-button{width:100%; height:60px; line-height: 60px;} 
+
+}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+<div class="header">FUN FRIDAY</div>
+<div class="category-body">
+	<img id="randomImage"  width="100%" height="312" src="https://timesofindia.indiatimes.com/thumb/msid-67973350,width-800,height-600,resizemode-4/67973350.jpg">
+	<div class="category-button" onclick="showRandom()">Show Clue</div>
+	
+</div>
+</div>
+<script type="text/javascript">
+	function showRandom(){
+		var myPix = new Array("https://pbs.twimg.com/profile_images/632540125751177216/nzKLbt71_400x400.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTXBLrXnS-8gRqvRWCnYUwvpyp8BPG148NP4YlVmq1LvYYHQSI", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202002/kartik-sara-770x433.png?ve2_YsAu2g0Cwmu1Bz6bd8tXZCzI.kHM","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSGt2o3Z4H5tNx5_EaMAgQTZLePmyfyHv3L3VFDeDAQh5Dj3gzM","https://www.incimages.com/uploaded_files/image/970x450/getty_168325476_349217.jpg","https://newsd.in/wp-content/uploads/2019/03/Hamlin_theatre.jpg");
+var randomNum = Math.floor(Math.random() * myPix.length);
+document.getElementById("randomImage").src = myPix[randomNum];
+
+	}
+	
+
+	</script>
+</body>
+</html>
